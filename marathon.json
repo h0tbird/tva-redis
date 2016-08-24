@@ -8,7 +8,9 @@
   "maxLaunchDelaySeconds": 3600,
   "labels": {
     "owner": "tva",
-    "HAPROXY_GROUP": "internal"
+    "HAPROXY_GROUP": "internal",
+    "HAPROXY_DEPLOYMENT_GROUP": "tva_redis",
+    "HAPROXY_DEPLOYMENT_ALT_PORT": "10011"
   },
   "container": {
     "type": "DOCKER",
@@ -16,7 +18,7 @@
       "image": "softonic/tva-redis:latest",
       "network": "BRIDGE",
       "portMappings": [
-        { "containerPort": 6379, "hostPort": 0 }
+        { "containerPort": 6379, "hostPort": 0, "servicePort": 10010 }
       ],
       "privileged": false,
       "forcePullImage": true
