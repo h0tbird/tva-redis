@@ -1,7 +1,7 @@
 {
   "id": "redis",
   "instances": 1,
-  "cpus": 0.5,
+  "cpus": 0.1,
   "mem": 1024,
   "backoffSeconds": 1,
   "backoffFactor": 1.15,
@@ -10,7 +10,7 @@
     "owner": "tva",
     "HAPROXY_GROUP": "internal",
     "HAPROXY_DEPLOYMENT_GROUP": "tva_redis",
-    "HAPROXY_DEPLOYMENT_ALT_PORT": "10011"
+    "HAPROXY_DEPLOYMENT_ALT_PORT": "10013"
   },
   "container": {
     "type": "DOCKER",
@@ -18,7 +18,7 @@
       "image": "internal-registry-sys.marathon:5000/tva/redis:latest",
       "network": "BRIDGE",
       "portMappings": [
-        { "containerPort": 6379, "hostPort": 0, "servicePort": 10010 }
+        { "containerPort": 6379, "hostPort": 0, "servicePort": 10012 }
       ],
       "privileged": false,
       "forcePullImage": true
