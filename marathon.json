@@ -15,7 +15,7 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "katosys/tva-redis:latest",
+      "image": "quay.io/kato/tva-redis:latest",
       "network": "BRIDGE",
       "portMappings": [
         { "containerPort": 6379, "hostPort": 0, "servicePort": 10012 }
