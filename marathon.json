@@ -24,7 +24,10 @@
     "docker": {
       "image": "quay.io/kato/tva-redis:latest",
       "forcePullImage": true
-    }
+    },
+    "portMappings": [
+      { "servicePort": 10012 }
+    ]
   },
   "healthChecks": [
     {
