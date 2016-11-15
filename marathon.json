@@ -9,25 +9,27 @@
   "labels": {
     "owner": "tva",
     "HAPROXY_GROUP": "internal",
-    "HAPROXY_DEPLOYMENT_GROUP": "tva_redis",
-    "HAPROXY_DEPLOYMENT_ALT_PORT": "10013"
+    "HAPROXY_DEPLOYMENT_GROUP": "tva_redis"
+  },
+  "ipAddress": {
+    "networkName": "devel",
+    "discovery": {
+      "ports": [
+        { "number": 6379, "name": "redis", "protocol": "tcp" }
+      ]
+    }
   },
   "container": {
-    "type": "DOCKER",
+    "type": "MESOS",
     "docker": {
       "image": "quay.io/kato/tva-redis:latest",
-      "network": "BRIDGE",
-      "portMappings": [
-        { "containerPort": 6379, "hostPort": 0, "servicePort": 10012 }
-      ],
-      "privileged": false,
       "forcePullImage": true
     }
   },
   "healthChecks": [
     {
       "protocol": "TCP",
-      "portIndex": 0,
+      "port": 6379,
       "gracePeriodSeconds": 120,
       "intervalSeconds": 30,
       "timeoutSeconds": 10,
