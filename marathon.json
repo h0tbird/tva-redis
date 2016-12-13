@@ -13,6 +13,10 @@
   },
   "ipAddress": {
     "networkName": "devel",
+    "labels": {
+      "app": "redis",
+      "group": "tva"
+    },
     "discovery": {
       "ports": [
         { "number": 6379, "name": "redis", "protocol": "tcp" }
@@ -31,7 +35,7 @@
   },
   "healthChecks": [
     {
-      "protocol": "TCP",
+      "protocol": "MESOS_TCP",
       "port": 6379,
       "gracePeriodSeconds": 120,
       "intervalSeconds": 30,
