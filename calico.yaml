@@ -3,12 +3,12 @@
   metadata:
     name: tva-redis
   spec:
-    selector: app == 'redis'
+    selector: group == 'tva' && app == 'redis'
     ingress:
     - action: allow
       protocol: tcp
       source:
-        selector: app in { 'voting', 'worker' }
+        selector: group == 'tva' && app in { 'voting', 'worker' }
       destination:
         ports:
         - 6379
