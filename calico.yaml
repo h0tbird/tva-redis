@@ -1,0 +1,16 @@
+- apiVersion: v1
+  kind: policy
+  metadata:
+    name: tva-redis
+  spec:
+    selector: app == 'redis'
+    ingress:
+    - action: allow
+      protocol: tcp
+      source:
+        selector: app in { 'voting', 'worker' }
+      destination:
+        ports:
+        - 6379
+    egress:
+    - action: allow
