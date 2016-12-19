@@ -3,7 +3,7 @@
 
 # tva-redis
 
-[![Build Status](https://travis-ci.org/katosys/tva-redis.svg?branch=master)](https://travis-ci.org/katosys/tva-redis)
+[![Build Status](https://travis-ci.org/h0tbird/tva-redis.svg?branch=master)](https://travis-ci.org/h0tbird/tva-redis)
 
 Containerized Redis service.
 
