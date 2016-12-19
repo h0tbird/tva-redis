@@ -1,9 +1,9 @@
 <img src="http://45.media.tumblr.com/192caecd5bc9b8c52d750d46432e1bde/tumblr_n6fzmszKS31sig4pbo1_500.gif"
   align="right" border="0" width="160" height="128" />
 
-# docker-tva-redis
+# tva-redis
 
-[![Build Status](https://travis-ci.org/katosys/docker-tva-redis.svg?branch=master)](https://travis-ci.org/katosys/docker-tva-redis)
+[![Build Status](https://travis-ci.org/katosys/tva-redis.svg?branch=master)](https://travis-ci.org/katosys/tva-redis)
 
 Containerized Redis service.
 
