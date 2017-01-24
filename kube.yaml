@@ -13,6 +13,7 @@ spec:
       containers:
       - name: redis
         image: quay.io/h0tbird/tva-redis:latest
+        imagePullPolicy: Always
 ---
 kind: Service
 apiVersion: v1
