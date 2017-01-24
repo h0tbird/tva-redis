@@ -14,6 +14,13 @@ spec:
       - name: redis
         image: quay.io/h0tbird/tva-redis:latest
         imagePullPolicy: Always
+        resources:
+          limits:
+            cpu: 100m
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 512Mi
 ---
 kind: Service
 apiVersion: v1
